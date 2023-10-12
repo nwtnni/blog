@@ -6,12 +6,15 @@ template = "content.html"
 
 I've studied the violin since 2007, with the following teachers:
 
-- Laura Sias
-- Jack Robbins
+- Jason Kim
 - Lillian and LeRoy Fenstermacher
+- Jack Robbins
+- Laura Sias
 
 and have been a member of the following orchestras:
 
+- [Cambridge Symphony Orchestra](https://www.cambridgesymphony.org/)
+- [Kendall Square Orchestra](https://www.kendallsquareorchestra.org/)
 - [Cornell Chamber and Symphony Orchestras](https://www.cuorchestra.org/)
 - [Detroit Metropolitan Youth Symphony](https://www.detroitmys.org/)
 - [Oakland Youth Orchestras](https://oyomi.org/)
