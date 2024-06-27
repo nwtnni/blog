@@ -27,6 +27,30 @@ and have some knowledge of C, TypeScript, and JavaScript.
 
 Check out my [resume][resume] for more information!
 
+### Blogroll
+
+I have learned a lot from the following blogs (in no particular order):
+
+- [Eli Bendersky](https://eli.thegreenplace.net/)
+- [Niko Matsakis](https://smallcultfollowing.com/babysteps/)
+- [withoutboats](https://without.boats/)
+- [Daniel Lemire](https://lemire.me/blog/)
+- [Miguel Young de la Sota](https://mcyoung.xyz/)
+- [Julia Evans](https://jvns.ca/)
+- [Justin Pombrio](https://justinpombrio.net/)
+- [Alex Kladov](https://matklad.github.io/)
+- [Chris Fallin](https://cfallin.org/)
+- [Mara Bos](https://blog.m-ou.se/)
+- [Ralf Jung](https://www.ralfj.de/)
+- [Nelson Elhage](https://blog.nelhage.com/)
+- [Evan Ovadia](https://verdagon.dev/home)
+- [Hillel Wayne](https://www.hillelwayne.com/)
+- [Gwern Branwen](https://gwern.net/)
+- [Graydon Hoare](https://graydon2.dreamwidth.org/)
+- [Adrian Sampson](https://www.cs.cornell.edu/~asampson/)
+- [Amos Wenger](https://fasterthanli.me/)
+- [Yoshua Wuyts](https://yoshuawuyts.com/)
+
 [ew]: https://www.cs.utexas.edu/users/witchel/
 [ut]: https://commure.com/
 [github]: https://github.com/nwtnni
