@@ -2,11 +2,11 @@
 {% import "macros.html" as macros %}
 
 {% block title %}
-  {{ super() }} | Notes
+  {{ super() }} | {{ section.title }}
 {% endblock title %}
 
 {% block description %}
-  Archived notes.
+  {{ section.description }}
 {% endblock description %}
 
 {% block body %}

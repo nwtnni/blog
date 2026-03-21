@@ -2,5 +2,84 @@
 {% import "macros.html" as macros %}
 
 {% block body %}
-  <div class="hero">Newton Ni</div>
+  <h1>Newton Ni</h1>
+
+  <p>
+    Hello! I am a fourth year CS PhD student at the University of Texas at Austin,
+    advised by <a href="https://www.cs.utexas.edu/~witchel/">Emmett Witchel</a>.
+    I am broadly interested in the performance and correctness of concurrent systems.
+    My recent work is motivated by <a href="https://computeexpresslink.org/">CXL</a>-attached
+    memory, which can be shared across machines. There are some interesting questions
+    here, to wit:
+    <ul>
+        <li>How do we design programs that tolerate partial failure of individual threads or processes?</li>
+        <li>How do we design data structures that scale to multiple machines worth of CPUs?</li>
+        <li>How do we verify correctness of lock-free data structures under partial failure?</li>
+        <li>How do we manage shared memory?</li>
+    </ul>
+  </p>
+
+  <hr>
+
+  <h2>Publications</h2>
+    {{ macros::publication(
+        title="Cxlalloc: Safe and Efficient Memory Allocation for a CXL Pod",
+        authors=["Newton Ni", "Yan Sun", "Zhiting Zhu", "Emmett Witchel"],
+        conference="ASPLOS 2026",
+        doi="https://doi.org/10.1145/3779212.3790149",
+        paper="https://www.cs.utexas.edu/~witchel/pubs/ni26asplos-cxlalloc.pdf",
+        code="https://github.com/nwtnni/cxlalloc",
+    ) }}
+
+    {{ macros::publication(
+        title="Impeller: Stream Processing on Shared Logs",
+        authors=["Zhiting Zhu", "Zhipeng Jia", "Newton Ni", "Dixin Tang", "Emmett Witchel"],
+        conference="EuroSys 2025",
+        doi="https://dl.acm.org/doi/abs/10.1145/3689031.3717485",
+        paper="https://dl.acm.org/doi/epdf/10.1145/3689031.3717485",
+        code="https://github.com/photoszzt/impeller",
+    ) }}
+
+    {{ macros::publication(
+        title="Tigon: A Distributed Database for a CXL Pod",
+        authors=["Yibo Huang", "Haowei Chen", "Newton Ni", "Yan Sun", "Vijay Chidambaram", "Dixin Tang", "Emmett Witchel"],
+        conference="OSDI 2025",
+        doi="https://dl.acm.org/doi/10.5555/3767901.3767908",
+        paper="https://www.usenix.org/system/files/osdi25-huang-yibo.pdf",
+        code="https://github.com/ut-datasys/tigon",
+    ) }}
+
+    {{ macros::publication(
+        title="Pasha: An Efficient, Scalable Database Architecture for CXL Pods",
+        authors=["Yibo Huang", "Newton Ni", "Vijay Chidambaram", "Emmett Witchel", "Dixin Tang"],
+        conference="CIDR 2025",
+        paper="https://vldb.org/cidrdb/papers/2025/p8-huang.pdf",
+    ) }}
+
+    {{ macros::publication(
+        title="Lupin: Tolerating Partial Failures in a CXL Pod",
+        authors=["Zhiting Zhu", "Newton Ni", "Yibo Huang", "Yan Sun", "Zhipeng Jia", "Nam Sung Kim", "Emmett Witchel"],
+        conference="DIMES 2024",
+        doi="https://dl.acm.org/doi/10.1145/3698783.3699377",
+        paper="https://dl.acm.org/doi/pdf/10.1145/3698783.3699377",
+    ) }}
+
+    {{ macros::publication(
+        title="Petr4: Formal Foundations for P4 Data Planes",
+        authors=["Ryan Doenges", "Mina Tahmasbi Arashloo", "Santiago Bautista", "Alexander Chang", "Newton Ni", "Samwise Parkinson", "Rudy Peterson", "Alaia Solko-Breslin", "Amanda Xu", "Nate Foster"],
+        conference="POPL 2021",
+        doi="https://dl.acm.org/doi/10.1145/3434322",
+        paper="https://dl.acm.org/doi/pdf/10.1145/3434322",
+    ) }}
+
+  <hr>
+
+  <h2>Teaching</h2>
+
+  <ul>
+    <li><a href="https://sites.google.com/view/utdirp/home">Directed undergraduate reading program</a> mentor for project "Crafting Interpreters in Rust". Fall 2024.</li>
+    <li>Teaching assistant for <a href="https://www.cs.utexas.edu/~novak/cs375.html">CS 375: Compilers</a>. Fall 2022.</li>
+    <li>Teaching assistant for <a href="https://cs3110.github.io/textbook/cover.html">CS 3110: Data Structures and Functional Programming</a>. Spring 2019, Fall 2018, Spring 2018.
+    <li>Teaching assistant for <a href="https://www.cs.cornell.edu/courses/cs2112/2025fa/">CS 2112: Object-Oriented Design and Data Structures (Honors)</a>. Fall 2017.
+  </ul>
 {% endblock body %}

@@ -18,3 +18,23 @@
     </div>
   </section>
 {% endmacro preview %}
+
+{% macro publication(title, authors, conference, doi='', paper='', code='') %}
+    <p>
+        <b>{{ title }}</b>
+        <br>
+            <span class="gray">
+                {{ authors | join(sep=", ") | replace(from='Newton Ni', to='<span class="highlight">Newton Ni</span>') | safe }}
+            </span>
+        <br>
+            <span class="gray">
+                {{ conference }}
+            </span>
+        <br>
+        <span>
+        {% if doi %}<a href="{{ doi }}" class="button"><i class="icon-right-big"></i> DOI</a>{% endif %}
+        {% if paper %}<a href="{{ paper }}" class="button"><i class="icon-right-big"></i> Paper</a>{% endif %}
+        {% if code %}<a href="{{ code }}" class="button"><i class="icon-right-big"></i> Code</a>{% endif %}
+        </span>
+    </p>
+{% endmacro doi %}

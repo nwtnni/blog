@@ -1,13 +1,13 @@
 title = "Newton Ni"
 description = "Newton Ni's personal website."
-
 base_url = "https://nwtnni.me"
-
-highlight_code = true
-highlight_theme = "inspired-github"
+author = "Newton Ni"
 
 compile_sass = true
-generate_rss = true
+feed_filenames = ["atom.xml", "rss.xml"]
+generate_feeds = true
+hard_link_static = true
 
-[extra]
-author = "Newton Ni"
+[markdown]
+highlight_code = true
+highlight_theme = "gruvbox-light"

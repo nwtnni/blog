@@ -4,28 +4,20 @@ description = "About Newton Ni."
 template = "content.html"
 +++
 
-### Hello!
+### About
 
 I graduated with a computer science degree from Cornell University's College
-of Engineering in 2019. I'm interested in applying high-level ideas from
-programming language theory to low-level topics like compilers and operating
-systems, and in leveraging type systems and other static analyses to ensure
-correctness and improve performance.
-
+of Engineering in 2019, after trying out CS research under [Nate Foster](https://natefoster.org/),
+then worked for a few years at [Commure](https://www.commure.com/).
+I started my PhD at the University of Texas at Austin in Fall 2022 under [Emmett Witchel][ew].
+Here is my (probably outdated) [resume][resume].
 For now, you can find me:
 
-- Working on my PhD with [Emmett Witchel][ew]
 - Tinkering with side projects on [Github][github]
 - Practicing violin and guitar
-- Bouldering, running, and playing volleyball
+- Playing volleyball, bouldering, and running
 - Attending [Austin Chinese Church][acc]
-
-As for technical skills:
-
-My preferred language is Rust. I am also proficient in OCaml, Java, and Python,
-and have some knowledge of C, TypeScript, and JavaScript.
-
-Check out my [resume][resume] for more information!
+- Gaming (MapleStory, Factorio, Slay the Spire 2, and Hollow Knight: Silksong as of late)
 
 ### Blogroll
 
