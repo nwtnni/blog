@@ -168,10 +168,16 @@ nav, footer {
   }
 }
 
-.hero {
-  font-size: 6rem;
-  font-weight: bold;
-  color: #333333;
-  text-align: center;
-  margin: $gap-large 0;
+.main {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  img {
+    display: inline-block;
+    width: 25rem;
+    height: 25rem;
+    margin: 0 2rem;
+    border-radius: 5rem;
+  }
 }
