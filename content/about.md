@@ -9,7 +9,7 @@ template = "content.html"
 I graduated with a computer science degree from Cornell University's College
 of Engineering in 2019, after trying out CS research under [Nate Foster](https://natefoster.org/),
 then worked for a few years at [Commure](https://www.commure.com/).
-I started my PhD at the University of Texas at Austin in Fall 2022 under [Emmett Witchel][ew].
+I started my PhD at The University of Texas at Austin in Fall 2022 under [Emmett Witchel][ew].
 Here is my (probably outdated) [resume][resume].
 For now, you can find me:
 
