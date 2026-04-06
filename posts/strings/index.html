@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+
+    <meta name="author" content="Newton Ni">
+    <title>
+  Newton Ni | A Survey of Rust Strings
+</title>
+    <meta name="description" content="
+  Examining the various string-related types in Rust. 
+">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Merriweather+Sans:400,700|Merriweather:400,700" rel="stylesheet"/>
+    <link href="/style.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <hr>
+    <nav>
+      <a class="button-text" href="/">Home</a>
+      <a class="button-text" href="/about">About</a>
+      <a class="button-text" href="/music">Music</a>
+      <a class="button-text" href="/projects">Projects</a>
+    </nav>
+    <hr>
+    <main>
+      
+  <article>
+    
+  <header>
+    <h1 class="title">
+      A Survey of Rust Strings
+    </h1>
+    <div class="date">
+      September 26, 2024
+    </div>
+  </header>
+
+    <main>
+      <p>Why does Rust have so many string types? How are they
+different, when should we use each one, and do they
+have analogues in other programming languages?</p>
+<span id="continue-reading"></span>
+<p>This post will try to address these questions by traversing
+the following families of types, roughly in order from least
+abstract to most abstract.</p>
+<ul>
+<li><a href="https://nwtnni.me/posts/strings/#native">Native Rust</a>
+<ul>
+<li><a href="https://nwtnni.me/posts/strings/#char">char</a></li>
+<li><a href="https://nwtnni.me/posts/strings/#u8">u8, [u8], &amp;[u8], and Vec&lt;u8&gt;</a></li>
+<li><a href="https://nwtnni.me/posts/strings/#str">str, &amp;str, and String</a></li>
+<li><a href="https://nwtnni.me/posts/strings/#static">&amp;'static str</a></li>
+</ul>
+</li>
+<li><a href="https://nwtnni.me/posts/strings/#ffi">Foreign Function Interface (FFI)</a>
+<ul>
+<li><a href="https://nwtnni.me/posts/strings/#c">CStr and CString</a></li>
+<li><a href="https://nwtnni.me/posts/strings/#os">OsStr and OsString</a></li>
+<li><a href="https://nwtnni.me/posts/strings/#path">Path and PathBuf</a></li>
+</ul>
+</li>
+<li><a href="https://nwtnni.me/posts/strings/#optimization">Optimization</a>
+<ul>
+<li><a href="https://nwtnni.me/posts/strings/#cow">Cow&lt;str&gt;</a></li>
+<li><a href="https://nwtnni.me/posts/strings/#sso">Small String Optimization (SSO)</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="native">Native Rust</h1>
+<p>These types are native in the sense that almost all Rust
+code that interacts solely with other Rust code (vs.
+with other programming languages or the operating system)
+will stick to these types.</p>
+<h2 id="char">char</h2>
+<p>What is a character, and how do we represent it in
+a computer? Both questions are (perhaps surprisingly)
+quite nuanced, and carry a lot of history.</p>
+<p>As an American English-speaking programmer, I used to
+think of a character as a 7-bit <a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a>-encoded value,
+which C stores in its 8-bit <a href="https://en.wikipedia.org/wiki/C_data_types#Main_types"><code>char</code></a> type.</p>
+<p>Today, while the world has mostly settled on <a href="https://home.unicode.org/">Unicode</a>,
+there is still</p>
+<p>Unlike C, where a char is (<a href="https://en.wikipedia.org/wiki/C_data_types#Main_types">at least</a>, but typically exactly) 1 byte</p>
+<ul>
+<li><a href="https://doc.rust-lang.org/std/primitive.char.html">rustdoc</a></li>
+</ul>
+<h2 id="u8">u8, [u8], &amp;[u8], and Vec&lt;u8&gt;</h2>
+<pre style="background-color:#fcf0ca;color:#282828aa;"><code><span>- [\[u8\]](https://doc.rust-lang.org/std/primitive.slice.html), &amp;\[u8\], and [Vec\&lt;u8\&gt;](https://doc.rust-lang.org/std/vec/struct.Vec.html)
+</span></code></pre>
+<h2 id="str">str, &amp;str, and String</h2>
+<pre style="background-color:#fcf0ca;color:#282828aa;"><code><span>- [str](https://doc.rust-lang.org/std/primitive.str.html), &amp;str, and [String](https://doc.rust-lang.org/std/string/struct.String.html)
+</span></code></pre>
+<h2 id="static">&amp;'static str</h2>
+<pre style="background-color:#fcf0ca;color:#282828aa;"><code><span>- &amp;&#39;static str
+</span></code></pre>
+<h1 id="ffi">Foreign Function Interface (FFI)</h1>
+<h2 id="c">CStr and CString</h2>
+<pre style="background-color:#fcf0ca;color:#282828aa;"><code><span>- [std::ffi::CString](https://doc.rust-lang.org/std/ffi/struct.CString.html) and [std::ffi::CStr](https://doc.rust-lang.org/std/ffi/struct.CStr.html)
+</span></code></pre>
+<h2 id="path">Path and PathBuf</h2>
+<pre style="background-color:#fcf0ca;color:#282828aa;"><code><span>- [std::path::PathBuf](https://doc.rust-lang.org/std/path/struct.PathBuf.html) and [std::path::Path](https://doc.rust-lang.org/std/path/struct.Path.html)
+</span></code></pre>
+<h2 id="os">OsStr and OsString</h2>
+<pre style="background-color:#fcf0ca;color:#282828aa;"><code><span>- [std::ffi::OsString](https://doc.rust-lang.org/std/ffi/struct.OsString.html) and [std::ffi::OsStr](https://doc.rust-lang.org/std/ffi/struct.OsStr.html)
+</span></code></pre>
+<h1 id="optimization">Optimization</h1>
+<h2 id="cow">Cow&lt;str&gt;</h2>
+<pre style="background-color:#fcf0ca;color:#282828aa;"><code><span>- [Cow\&lt;str\&gt;](https://doc.rust-lang.org/std/borrow/enum.Cow.html)
+</span></code></pre>
+<h2 id="sso">Small String Optimization (SSO)</h2>
+<pre style="background-color:#fcf0ca;color:#282828aa;"><code><span>- [Small String Optimization (SSO)](https://github.com/rosetta-rs/string-rosetta-rs)
+</span></code></pre>
+
+    </main>
+  </article>
+
+    </main>
+    <hr>
+    <footer>
+      <a href="https://github.com/nwtnni" class="button"><i class="icon-github"></i><span class="collapse"> GitHub</span></a>
+      <a href="mailto:nwtnni@gmail.com" class="button"><i class="icon-mail-alt"></i><span class="collapse"> Gmail</span></a>
+      <a href="https://www.youtube.com/channel/UC26iIHidX2FUZFx2Se3x4eA" class="button"><i class="icon-youtube-play"></i><span class="collapse"> YouTube</span></a>
+    </footer>
+  </body>
+</html>
