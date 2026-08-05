@@ -23,25 +23,33 @@ For now, you can find me:
 
 I have learned a lot from the following blogs (in no particular order):
 
-- [Eli Bendersky](https://eli.thegreenplace.net/)
-- [Niko Matsakis](https://smallcultfollowing.com/babysteps/)
-- [withoutboats](https://without.boats/)
-- [Daniel Lemire](https://lemire.me/blog/)
-- [Miguel Young de la Sota](https://mcyoung.xyz/)
-- [Julia Evans](https://jvns.ca/)
-- [Justin Pombrio](https://justinpombrio.net/)
-- [Alex Kladov](https://matklad.github.io/)
-- [Chris Fallin](https://cfallin.org/)
-- [Mara Bos](https://blog.m-ou.se/)
-- [Ralf Jung](https://www.ralfj.de/)
-- [Nelson Elhage](https://blog.nelhage.com/)
-- [Evan Ovadia](https://verdagon.dev/home)
-- [Hillel Wayne](https://www.hillelwayne.com/)
-- [Gwern Branwen](https://gwern.net/)
-- [Graydon Hoare](https://graydon2.dreamwidth.org/)
-- [Adrian Sampson](https://www.cs.cornell.edu/~asampson/)
-- [Amos Wenger](https://fasterthanli.me/)
-- [Yoshua Wuyts](https://yoshuawuyts.com/)
+- [Eli Bendersky](https://eli.thegreenplace.net/): compilers, linkers, loaders
+- [Niko Matsakis](https://smallcultfollowing.com/babysteps/): Rust, language design, type theory
+- [withoutboats](https://without.boats/): Rust, language design
+- [Daniel Lemire](https://lemire.me/blog/): SIMD
+- [Sunny Young de la Sota](https://mcyoung.xyz/): Rust, compilers
+- [Julia Evans](https://jvns.ca/): Linux
+- [Justin Pombrio](https://justinpombrio.net/): programming languages
+- [Alex Kladov](https://matklad.github.io/): Rust, semantic analysis
+- [Chris Fallin](https://cfallin.org/): compilers
+- [Mara Bos](https://blog.m-ou.se/): concurrency
+- [Ralf Jung](https://www.ralfj.de/): Rust, language design
+- [Nelson Elhage](https://blog.nelhage.com/): performance, systems
+- [Evan Ovadia](https://verdagon.dev/home): compilers, language design
+- [Hillel Wayne](https://www.hillelwayne.com/): formal verification, testing
+- [Graydon Hoare](https://graydon2.dreamwidth.org/): Rust, language design
+- [Adrian Sampson](https://www.cs.cornell.edu/~asampson/): compilers
+- [Amos Wenger](https://fasterthanli.me/): Rust
+- [Yoshua Wuyts](https://yoshuawuyts.com/): Rust, language design
+- [Fangrui Song](https://maskray.me/): compilers, linkers
+- [Sergey Davidoff](https://shnatsel.github.io/): SIMD
+- [Peter Cordes](https://stackoverflow.com/users/224132/peter-cordes): SIMD
+- [Nicolas Nethercote](https://nnethercote.github.io/): Rust, performance
+- [Jon Gjengset](https://thesquareplanet.com/): Rust
+- [Philipp Oppermann](https://os.phil-opp.com/): operating systems
+- [Ibraheem Ahmed](https://ibraheem.ca/): concurrency
+- [David Lattimore](https://davidlattimore.github.io/): linkers
+- [Jakub Beránek](https://kobzol.github.io/): Rust, performance
 
 [ew]: https://www.cs.utexas.edu/users/witchel/
 [ut]: https://commure.com/
