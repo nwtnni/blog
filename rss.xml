@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>Newton Ni</title>
+      <link>https://nwtnni.me</link>
+      <description>Newton Ni&#x27;s personal website.</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://nwtnni.me/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Thu, 26 Sep 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>A Survey of Rust Strings</title>
+          <pubDate>Thu, 26 Sep 2024 00:00:00 +0000</pubDate>
+          <author>Newton Ni</author>
+          <link>https://nwtnni.me/posts/strings/</link>
+          <guid>https://nwtnni.me/posts/strings/</guid>
+          <description xml:base="https://nwtnni.me/posts/strings/">&lt;p&gt;Why does Rust have so many string types? How are they
+different, when should we use each one, and do they
+have analogues in other programming languages?&lt;&#x2F;p&gt;</description>
+      </item>
+      <item>
+          <title>Black-box Concurrent Data Structures for NUMA Architectures</title>
+          <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
+          <author>Newton Ni</author>
+          <link>https://nwtnni.me/notes/node-replication/</link>
+          <guid>https://nwtnni.me/notes/node-replication/</guid>
+          <description xml:base="https://nwtnni.me/notes/node-replication/">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;doi.org&#x2F;10.1145&#x2F;3037697.3037721&quot;&gt;This paper&lt;&#x2F;a&gt; [1]
+recognizes how NUMA architectures are similar to
+distributed systems--namely, the high cost of synchronization
+between nodes&#x2F;hosts, respectively--and essentially applies
+state machine replication to in-memory data structures.
+The primary contribution is a NUMA-aware shared log.&lt;&#x2F;p&gt;</description>
+      </item>
+    </channel>
+</rss>
