@@ -23,9 +23,20 @@
     <p>
         <b>{{ title }}</b>
         <br>
-            <span class="gray">
-                {{ authors | join(sep=", ") | replace(from='Newton Ni', to='<span class="highlight">Newton Ni</span>') | safe }}
-            </span>
+            {% for author in authors %}
+                <!-- NOTE: ternary expression not supported as assignment RHS? -->
+                {% if not loop.last %}
+                    {% set comma = "," %}
+                {% else %}
+                    {% set comma = "" %}
+                {% endif %}
+
+                {% if author in config.extra.urls %}
+                    <a class="gray" href={{ config.extra.urls[author] }}>{{ author }}</a>{{ comma }}
+                {% else %}
+                    <span class="highlight"><b>{{ author }}</b></span>{{ comma }}
+                {% endif %}
+            {% endfor %}
         <br>
             <span class="gray">
                 {{ conference }}

@@ -154,8 +154,11 @@ nav, footer {
   }
 }
 
-.gray {
-  color: $text-quote;
+a.gray {
+  color: $text-fg;
+  &:visited {
+    color: $text-quote;
+  }
 }
 
 .highlight {

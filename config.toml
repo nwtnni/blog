@@ -8,6 +8,29 @@ feed_filenames = ["atom.xml", "rss.xml"]
 generate_feeds = true
 hard_link_static = true
 
-[markdown]
-highlight_code = true
-highlight_theme = "gruvbox-light"
+[markdown.highlighting]
+theme = "github-light"
+
+[extra.urls]
+"Alaia Solko-Breslin" = "https://alaiasolkobreslin.github.io/"
+"Alexander Chang" = "https://www.linkedin.com/in/apcha/"
+"Amanda Xu" = "https://amandashoe.github.io/"
+"Dixin Tang" = "https://dx-tang.github.io/"
+"Emmett Witchel" = "https://www.cs.utexas.edu/~witchel/"
+"Haowei Chen" = "https://www.linkedin.com/in/haowei-chen-9b62a2342/"
+"Jenny Stinehour" = "https://www.linkedin.com/in/jennystinehour/"
+"Nam Sung Kim" = "https://ece.illinois.edu/about/directory/faculty/nskim"
+"Nate Foster" = "https://natefoster.org/"
+"Nicolas Garza" = "https://nicolas.ai"
+"Michael Goppert" = "https://mi.gopp.dev/"
+"Michal Friedman" = "https://cores.inf.ethz.ch/people/michalfriedman/"
+"Mina Tahmasbi Arashloo" = "https://mina.arashloo.net/"
+"Rudy Peterson" = "https://rudynicolop.github.io/"
+"Ryan Doenges" = "https://ryandoeng.es/"
+"Samwise Parkinson" = "https://www.linkedin.com/in/samwise-parkinson-11ba3b237/"
+"Santiago Bautista" = "https://sbautista.fr/"
+"Vijay Chidambaram" = "https://www.cs.utexas.edu/~vijay/"
+"Yan Sun" = "https://ynnsau.github.io/"
+"Yibo Huang" = "https://yibo-huang.github.io/"
+"Zhipeng Jia" = "https://about.zjia.one/"
+"Zhiting Zhu" = "https://photoszzt.github.io/"
